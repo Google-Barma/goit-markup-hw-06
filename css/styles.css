@@ -28,6 +28,14 @@ img {
     display: block;
 }
 
+textarea {
+    resize: none;
+}
+
+input {
+    height: 40px;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -529,7 +537,7 @@ address p {
 .modal {
     position: absolute;
     width: 528px;
-    height: 582px;
+    min-height: 582px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -550,8 +558,132 @@ address p {
     cursor: pointer;
 }
 
+.modal-button:hover {
+    border: 1px solid var(--accent-blue);
+}
+
+.modal-button:hover svg {
+    fill: var(--accent-blue);
+}
+
 .is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.form-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    margin-bottom: 4px;
+}
+
+.field {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 16px 12px 40px;
+    width: 100%;
+    caret-color: var(--accent-blue);
+}
+
+.modal .field::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.field:focus-within {
+    outline: 1px solid var(--accent-blue);
+    border: 1px solid transparent;
+}
+
+.field[name="comment"] {
+    padding: 12px 16px;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.input-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.form-field:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.form-field svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkbox-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.checkbox-wrapper .label {
+    font-size: 14px;
+    line-height: 1.71;
+    margin: 0;
+}
+
+.label > a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+.checkbox {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3e%3cpath fill='%23212121' d='M14.222 1.667v11.666H1.778V1.667h12.444Zm0-1.667H1.778C.8 0 0 .75 0 1.667v11.666C0 14.25.8 15 1.778 15h12.444C15.2 15 16 14.25 16 13.333V1.667C16 .75 15.2 0 14.222 0Z'/%3e%3c/svg%3e");
+    
+    margin-right: 7px;
+    
+
+}
+
+.checkbox:checked {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='15' fill='none'%3e%3crect width='16' height='15' fill='%232196F3' rx='2'/%3e%3cpath fill='%23fff' stroke='%23fff' stroke-width='.2' d='m3.957 7.752-.069-.066-.069.065-.888.842-.076.072.076.073 3.496 3.334.069.066.069-.066 7.504-7.158.076-.073-.076-.072-.882-.841-.069-.066-.069.066-6.553 6.246-2.539-2.422Z'/%3e%3c/svg%3e");
+}
+
+.modal-form button {
+    padding: 10px 52px;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: var(--white);
 }
