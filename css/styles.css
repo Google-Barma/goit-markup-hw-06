@@ -181,6 +181,9 @@ input {
     background: var(--accent-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
     cursor: pointer;
 }
 
@@ -424,6 +427,23 @@ address p {
 
 .footer .social-icon {
     fill: var(--white);
+}
+
+.subscription-wrap {
+    padding: 0 90px;
+    width: 100%;
+}
+
+input[id="subscription"] {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 0 16px;
+    margin-right: 12px;
+    color: var(--white);
 }
 
 .container.portpholio {
